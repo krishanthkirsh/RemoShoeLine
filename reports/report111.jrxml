@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report111" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2f703ec3-b9ce-4219-b62a-a91a9b6f2755">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="dataset1" uuid="25e531ab-f9bf-41f5-bf37-bc97346045d6"/>
+	<queryString>
+		<![CDATA[SELECT
+     drivers.`DR_ID` AS drivers_DR_ID,
+     drivers.`DR_Name` AS drivers_DR_Name,
+     drivers.`DR_address` AS drivers_DR_address,
+     drivers.`age` AS drivers_age,
+     drivers.`NIC` AS drivers_NIC,
+     drivers.`DLN` AS drivers_DLN,
+     drivers.`Phonenumber` AS drivers_Phonenumber,
+     drivers.`vehicle_number` AS drivers_vehicle_number
+FROM
+     `drivers`]]>
+	</queryString>
+	<field name="drivers_DR_ID" class="java.lang.Integer"/>
+	<field name="drivers_DR_Name" class="java.lang.String"/>
+	<field name="drivers_DR_address" class="java.lang.String"/>
+	<field name="drivers_age" class="java.lang.Integer"/>
+	<field name="drivers_NIC" class="java.lang.String"/>
+	<field name="drivers_DLN" class="java.lang.String"/>
+	<field name="drivers_Phonenumber" class="java.lang.Integer"/>
+	<field name="drivers_vehicle_number" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="132" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="7b9faa70-32c3-4c50-a854-f1d80b4f59a7" style="Column header" x="0" y="7" width="69" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[drivers_DR_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e2014ede-eef0-4b04-99a9-c11f4a32d79e" style="Column header" x="69" y="7" width="69" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[drivers_DR_Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e1eb2abb-1b2a-482a-abb9-5b434989913f" style="Column header" x="138" y="7" width="69" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[drivers_DR_address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="62d49576-6b91-4627-a59c-05299919445e" style="Column header" x="207" y="7" width="69" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[drivers_age]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="749c2633-58f6-4db4-a292-23a800e1c90a" style="Column header" x="276" y="7" width="69" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[drivers_NIC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4febbf88-51f7-4e12-83ab-c0231a408878" style="Column header" x="345" y="7" width="69" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[drivers_DLN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="165f9c6b-2a02-43b4-93a9-c0ba2bbed8bd" style="Column header" x="414" y="7" width="69" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[drivers_Phonenumber]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4ff07e63-2e5a-489a-bde9-e80a6680ac7f" style="Column header" x="483" y="7" width="69" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[drivers_vehicle_number]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<frame>
+				<reportElement uuid="08147e63-8e95-412d-a36b-bac1392673e8" style="Row" mode="Opaque" x="0" y="0" width="555" height="18"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="1246b225-2573-44c2-91ac-3a2d0d550921" style="Detail" positionType="Float" x="0" y="0" width="69" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{drivers_DR_ID}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="efac9920-993c-4e84-bbb0-da90c4e25d2d" style="Detail" positionType="Float" x="69" y="0" width="69" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{drivers_DR_Name}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="91a02bb1-6a9d-4a23-927f-0a4f6ccf90f9" style="Detail" positionType="Float" x="138" y="0" width="69" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{drivers_DR_address}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="a330c890-1ad9-4eca-857f-295e2db73c17" style="Detail" positionType="Float" x="207" y="0" width="69" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{drivers_age}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="84df9f3f-d0a0-4269-88b4-4ed912ea63f5" style="Detail" positionType="Float" x="276" y="0" width="69" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{drivers_NIC}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="55f3f59f-2ac9-4e63-9332-e49602419ba9" style="Detail" positionType="Float" x="345" y="0" width="69" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{drivers_DLN}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="1a633d98-2711-4b65-bea6-8f8fedaefdb2" style="Detail" positionType="Float" x="414" y="0" width="69" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{drivers_Phonenumber}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="5b70bf16-d736-4f3d-9f6a-67c15d9811a5" style="Detail" positionType="Float" x="483" y="0" width="69" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{drivers_vehicle_number}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch">
+			<line>
+				<reportElement uuid="f54eea22-3d73-44b7-bd33-3569043d99d2" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement uuid="7554ef5d-67a9-4d3f-afe8-81835ecea9bb" mode="Opaque" x="0" y="1" width="555" height="24" forecolor="#D0B48E" backcolor="#000000"/>
+				<textField evaluationTime="Report">
+					<reportElement uuid="576f6ca3-7df2-4243-9da6-e92633c36797" style="Column header" x="513" y="0" width="40" height="20" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="68e01b0f-c2a0-4d24-ae1f-99803d15511e" style="Column header" x="433" y="0" width="80" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement uuid="a7f5cb0b-1a57-41d7-adc8-d510bc10cf88" style="Column header" x="2" y="1" width="197" height="20" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

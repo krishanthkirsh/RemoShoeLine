@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="billsreport" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5aaa9f90-af52-46f7-8ec3-609d3093cd59">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="billsreport"/>
+	<queryString>
+		<![CDATA[select * from Bill]]>
+	</queryString>
+	<field name="billNo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="receptionist" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="paymentStatus" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="paymentMethod" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="55" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="-1" y="0" width="555" height="55" uuid="fd90ddc6-bcb8-4535-b5b0-256dd1cd3deb">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Report Of Bills]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="40" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<rectangle>
+				<reportElement x="0" y="0" width="554" height="40" backcolor="#C0C0C0" uuid="565224d2-02fc-4295-b9c9-87cb19c882f2">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="60" height="40" uuid="31f5b2f3-8667-4f30-9d8f-a4a7698dde6f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[billNo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="0" width="80" height="40" uuid="c5ac7325-edc6-4458-b1c0-2551deba646a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="0" width="90" height="40" uuid="12191df5-aad4-4692-a774-69f5a86b4c9a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="0" width="110" height="40" uuid="1c60777d-bbf8-4b7b-a8a4-dc38126d3550"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[receptionist]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="0" width="120" height="40" uuid="c0898f91-0994-44f0-8fc7-8ac7251d974a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[paymentStatus]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="0" width="94" height="40" uuid="460ec400-bf88-4e16-a3c8-4e0d49a22719"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[paymentMethod]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="67" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="-1" y="0" width="61" height="64" uuid="81b24e60-c983-4841-b010-85fa90ad61fa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{billNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="0" width="80" height="64" uuid="fcacd96b-0762-4716-bb83-33546467026f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="-1" width="90" height="67" uuid="edb6bfe6-d7de-41e4-b449-4cf52c9e70f2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="0" width="110" height="66" uuid="e53f5462-6ade-425c-8fdb-8352d207bca0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{receptionist}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="0" width="120" height="67" uuid="dad8124c-2c30-47bd-8d7c-f88bc863ede6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{paymentStatus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="0" width="95" height="67" uuid="0cd9e989-9487-48b8-a3a3-1bdde5be0c8a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{paymentMethod}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

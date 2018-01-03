@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report3" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a990036d-e27c-441b-898a-ef1b197f9ea0">
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     vehiclemaintains.`ve_Maintains_ID` AS vehiclemaintains_ve_Maintains_ID,
+     vehiclemaintains.`Amount` AS vehiclemaintains_Amount,
+     vehiclemaintains.`Description` AS vehiclemaintains_Description,
+     vehiclemaintains.`Date` AS vehiclemaintains_Date,
+     vehiclemaintains.`vehiclenumber` AS vehiclemaintains_vehiclenumber
+FROM
+     `vehiclemaintains` vehiclemaintains]]>
+	</queryString>
+	<field name="vehiclemaintains_ve_Maintains_ID" class="java.lang.String"/>
+	<field name="vehiclemaintains_Amount" class="java.lang.Double"/>
+	<field name="vehiclemaintains_Description" class="java.lang.String"/>
+	<field name="vehiclemaintains_Date" class="java.lang.String"/>
+	<field name="vehiclemaintains_vehiclenumber" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="132" splitType="Stretch">
+			<image>
+				<reportElement uuid="4d0de4f7-2ae0-4a47-9fba-654a97e9aa0f" x="456" y="0" width="99" height="132"/>
+				<imageExpression><![CDATA["cherry.jpg"]]></imageExpression>
+			</image>
+			<frame>
+				<reportElement uuid="48bbac22-4dde-44bb-9913-b0b75e1d851d" mode="Opaque" x="0" y="0" width="451" height="95" backcolor="#000000"/>
+				<staticText>
+					<reportElement uuid="144b1c9c-5e24-433c-8dcc-19681b0cc306" style="Title" x="0" y="0" width="370" height="66"/>
+					<textElement>
+						<font isBold="false"/>
+					</textElement>
+					<text><![CDATA[Cherry Title]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="027c348e-e7be-4af9-8079-9d2e5fbc5be4" style="SubTitle" x="157" y="66" width="249" height="29"/>
+					<textElement>
+						<font size="22" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Cherry SubTitle]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement uuid="9dafc900-c316-46ed-b8fe-d4c6ab2fa59f" mode="Opaque" x="0" y="100" width="451" height="32" forecolor="#000000" backcolor="#CC0000"/>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement uuid="e68c5e22-8546-49cf-b787-099de6857012" x="307" y="12" width="144" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="bbc5c8de-122a-48fa-8d2b-e68d3b52a918" style="Column header" x="0" y="7" width="111" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[vehiclemaintains_ve_Maintains_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="88bd271c-83f2-4b34-abbc-672ba126fd34" style="Column header" x="111" y="7" width="111" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[vehiclemaintains_Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7251feb3-f6b3-4a09-bdcd-7b2e04042266" style="Column header" x="222" y="7" width="111" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[vehiclemaintains_Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2f70b046-8263-460c-869b-11f184cd739c" style="Column header" x="333" y="7" width="111" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[vehiclemaintains_Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d5cbe9cc-3f74-43e8-86bc-bbf152509462" style="Column header" x="444" y="7" width="111" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[vehiclemaintains_vehiclenumber]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<frame>
+				<reportElement uuid="78e43d42-7443-4719-9502-81bde61f76e8" style="Row" mode="Opaque" x="0" y="0" width="555" height="18"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="d0768041-f380-4d9d-bf01-29921ba78936" style="Detail" positionType="Float" x="0" y="0" width="111" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{vehiclemaintains_ve_Maintains_ID}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="389e8109-d1f8-4e4f-889b-107bfdb1d112" style="Detail" positionType="Float" x="111" y="0" width="111" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{vehiclemaintains_Amount}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="ebc84122-5e84-444e-9527-cc341c7f3e57" style="Detail" positionType="Float" x="222" y="0" width="111" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{vehiclemaintains_Description}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="92a5bd18-b5b2-4974-9e23-107070c6863a" style="Detail" positionType="Float" x="333" y="0" width="111" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{vehiclemaintains_Date}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="f7b9d531-fbdf-4e9c-8a40-e089e9d478b8" style="Detail" positionType="Float" x="444" y="0" width="111" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{vehiclemaintains_vehiclenumber}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch">
+			<line>
+				<reportElement uuid="a3cf9194-6dd1-44b2-80c2-3a873febc3f9" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement uuid="e5fb00b8-378f-4b1c-b1e6-b2d1f40e3a23" mode="Opaque" x="0" y="1" width="555" height="24" forecolor="#D0B48E" backcolor="#000000"/>
+				<textField evaluationTime="Report">
+					<reportElement uuid="35a91826-5e39-4f8f-9f74-1c79471b2e69" style="Column header" x="513" y="0" width="40" height="20" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="609c94e6-fbe2-4632-acad-3d76021a8022" style="Column header" x="433" y="0" width="80" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement uuid="d5794d8c-9a68-429c-82d6-925d4df353fb" style="Column header" x="2" y="1" width="197" height="20" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

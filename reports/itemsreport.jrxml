@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="itemsreport" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="28a7f3d7-3b9d-41d4-81e6-7306db83d950">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="itemsreport"/>
+	<queryString>
+		<![CDATA[select itemNo, name, category, price from Items]]>
+	</queryString>
+	<field name="itemNo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="category" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="price" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="55" uuid="a1051ab0-283e-4c5f-bb5a-ec81c9a3e53c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Item Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="40" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="554" height="32" backcolor="#C0C0C0" uuid="8b7f6abf-b23f-417f-bd7a-44f64e0e576c"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="1" width="89" height="30" forecolor="#666666" backcolor="#99CCFF" uuid="f3696872-5b2d-42b3-913f-9a3ef4cbd9de"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Open Sans" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Item ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="89" y="1" width="213" height="30" forecolor="#666666" backcolor="#99CCFF" uuid="7b4a78af-cec6-41a4-af7c-b45d9fc48a03"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Open Sans" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="302" y="1" width="151" height="30" forecolor="#666666" backcolor="#99CCFF" uuid="98c540af-b63b-4961-8eee-5e05cb36804b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Open Sans" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="453" y="1" width="97" height="30" forecolor="#666666" backcolor="#99CCFF" uuid="600092bf-6097-4209-8a5e-0f158db056ad"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Open Sans" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="39" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="-7" width="89" height="40" uuid="a1ce59f6-914b-4dd5-a428-a0baed708cab"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Open Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{itemNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="89" y="-7" width="213" height="40" uuid="f047817a-f40e-483d-ab6d-a579bce63d24"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Open Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="302" y="-7" width="151" height="40" uuid="39dac515-0c0b-4edf-a9c9-705a751414e4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Open Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{category}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="453" y="-10" width="102" height="43" uuid="9cea2285-fa1b-4e01-9ae2-a1620f5b9120"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Open Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperPrint xmlns="http://jasperreports.sourceforge.net/jasperreports/print" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/print http://jasperreports.sourceforge.net/xsd/jasperprint.xsd" name="billsreport" pageWidth="595" pageHeight="842" topMargin="20" leftMargin="20" bottomMargin="20" rightMargin="20" locale="en_US" timezone="Asia/Colombo">
+	<property name="net.sf.jasperreports.export.xml.start.page.index" value="0"/>
+	<property name="net.sf.jasperreports.export.xml.end.page.index" value="0"/>
+	<property name="net.sf.jasperreports.export.xml.page.count" value="1"/>
+	<origin band="background"/>
+	<origin band="title"/>
+	<origin band="pageHeader"/>
+	<origin band="columnHeader"/>
+	<origin band="detail"/>
+	<origin band="columnFooter"/>
+	<origin band="pageFooter"/>
+	<page>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="32.703125" lineSpacingFactor="1.2578125" leadingOffset="-5.7128906">
+			<reportElement uuid="fd90ddc6-bcb8-4535-b5b0-256dd1cd3deb" x="19" y="20" width="555" height="55" origin="1" srcId="1"/>
+			<font size="26" isBold="true"/>
+			<textContent><![CDATA[Report Of Bills]]></textContent>
+		</text>
+		<rectangle radius="0">
+			<reportElement uuid="565224d2-02fc-4295-b9c9-87cb19c882f2" x="20" y="75" width="554" height="40" backcolor="#C0C0C0" origin="2" srcId="2"/>
+		</rectangle>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="20.125" lineSpacingFactor="1.2578125" leadingOffset="-3.515625">
+			<reportElement uuid="31f5b2f3-8667-4f30-9d8f-a4a7698dde6f" x="20" y="75" width="60" height="40" origin="2" srcId="3"/>
+			<font size="16" isBold="true"/>
+			<textContent><![CDATA[billNo]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="20.125" lineSpacingFactor="1.2578125" leadingOffset="-3.515625">
+			<reportElement uuid="c5ac7325-edc6-4458-b1c0-2551deba646a" x="80" y="75" width="80" height="40" origin="2" srcId="4"/>
+			<font size="16" isBold="true"/>
+			<textContent><![CDATA[total]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="20.125" lineSpacingFactor="1.2578125" leadingOffset="-3.515625">
+			<reportElement uuid="12191df5-aad4-4692-a774-69f5a86b4c9a" x="160" y="75" width="90" height="40" origin="2" srcId="5"/>
+			<font size="16" isBold="true"/>
+			<textContent><![CDATA[date]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="20.125" lineSpacingFactor="1.2578125" leadingOffset="-3.515625">
+			<reportElement uuid="1c60777d-bbf8-4b7b-a8a4-dc38126d3550" x="250" y="75" width="110" height="40" origin="2" srcId="6"/>
+			<font size="16" isBold="true"/>
+			<textContent><![CDATA[receptionist]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="13.8359375" lineSpacingFactor="1.2578125" leadingOffset="-2.4169922">
+			<reportElement uuid="c0898f91-0994-44f0-8fc7-8ac7251d974a" x="360" y="75" width="120" height="40" origin="2" srcId="7"/>
+			<font size="11" isBold="true"/>
+			<textContent><![CDATA[paymentStatus]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="13.8359375" lineSpacingFactor="1.2578125" leadingOffset="-2.4169922">
+			<reportElement uuid="460ec400-bf88-4e16-a3c8-4e0d49a22719" x="480" y="75" width="94" height="40" origin="2" srcId="8"/>
+			<font size="11" isBold="true"/>
+			<textContent><![CDATA[paymentMethod]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" lineSpacingFactor="1.2578125" leadingOffset="-2.1972656" valueClass="java.lang.Integer">
+			<reportElement uuid="81b24e60-c983-4841-b010-85fa90ad61fa" x="19" y="115" width="61" height="64" origin="4" srcId="9"/>
+			<textContent><![CDATA[1]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" lineSpacingFactor="1.2578125" leadingOffset="-2.1972656" valueClass="java.lang.Double">
+			<reportElement uuid="fcacd96b-0762-4716-bb83-33546467026f" x="80" y="115" width="80" height="64" origin="4" srcId="10"/>
+			<textContent><![CDATA[3740.0]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" lineSpacingFactor="1.2578125" leadingOffset="-2.1972656" valueClass="java.sql.Timestamp" pattern="M/d/yy h:mm a">
+			<reportElement uuid="edb6bfe6-d7de-41e4-b449-4cf52c9e70f2" x="160" y="114" width="90" height="67" origin="4" srcId="11"/>
+			<textContent><![CDATA[4/6/14 1:10 AM]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" lineSpacingFactor="1.2578125" leadingOffset="-2.1972656" valueClass="java.lang.Integer">
+			<reportElement uuid="e53f5462-6ade-425c-8fdb-8352d207bca0" x="250" y="115" width="110" height="66" origin="4" srcId="12"/>
+			<textContent><![CDATA[1]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" lineSpacingFactor="1.2578125" leadingOffset="-2.1972656">
+			<reportElement uuid="dad8124c-2c30-47bd-8d7c-f88bc863ede6" x="360" y="115" width="120" height="67" origin="4" srcId="13"/>
+			<textContent><![CDATA[Paid]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" lineSpacingFactor="1.2578125" leadingOffset="-2.1972656">
+			<reportElement uuid="0cd9e989-9487-48b8-a3a3-1bdde5be0c8a" x="480" y="115" width="95" height="67" origin="4" srcId="14"/>
+			<textContent><![CDATA[Cash]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" lineSpacingFactor="1.2578125" leadingOffset="-2.1972656" valueClass="java.lang.Integer">
+			<reportElement uuid="81b24e60-c983-4841-b010-85fa90ad61fa" x="19" y="182" width="61" height="64" origin="4" srcId="9"/>
+			<textContent><![CDATA[2]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" lineSpacingFactor="1.2578125" leadingOffset="-2.1972656" valueClass="java.lang.Double">
+			<reportElement uuid="fcacd96b-0762-4716-bb83-33546467026f" x="80" y="182" width="80" height="64" origin="4" srcId="10"/>
+			<textContent><![CDATA[4410.0]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" lineSpacingFactor="1.2578125" leadingOffset="-2.1972656" valueClass="java.sql.Timestamp" pattern="M/d/yy h:mm a">
+			<reportElement uuid="edb6bfe6-d7de-41e4-b449-4cf52c9e70f2" x="160" y="181" width="90" height="67" origin="4" srcId="11"/>
+			<textContent><![CDATA[4/6/14 1:10 AM]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" lineSpacingFactor="1.2578125" leadingOffset="-2.1972656" valueClass="java.lang.Integer">
+			<reportElement uuid="e53f5462-6ade-425c-8fdb-8352d207bca0" x="250" y="182" width="110" height="66" origin="4" srcId="12"/>
+			<textContent><![CDATA[1]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" lineSpacingFactor="1.2578125" leadingOffset="-2.1972656">
+			<reportElement uuid="dad8124c-2c30-47bd-8d7c-f88bc863ede6" x="360" y="182" width="120" height="67" origin="4" srcId="13"/>
+			<textContent><![CDATA[Paid]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" lineSpacingFactor="1.2578125" leadingOffset="-2.1972656">
+			<reportElement uuid="0cd9e989-9487-48b8-a3a3-1bdde5be0c8a" x="480" y="182" width="95" height="67" origin="4" srcId="14"/>
+			<textContent><![CDATA[Credit Card]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" lineSpacingFactor="1.2578125" leadingOffset="-2.1972656" valueClass="java.lang.Integer">
+			<reportElement uuid="81b24e60-c983-4841-b010-85fa90ad61fa" x="19" y="249" width="61" height="64" origin="4" srcId="9"/>
+			<textContent><![CDATA[3]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" lineSpacingFactor="1.2578125" leadingOffset="-2.1972656" valueClass="java.lang.Double">
+			<reportElement uuid="fcacd96b-0762-4716-bb83-33546467026f" x="80" y="249" width="80" height="64" origin="4" srcId="10"/>
+			<textContent><![CDATA[2090.0]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" lineSpacingFactor="1.2578125" leadingOffset="-2.1972656" valueClass="java.sql.Timestamp" pattern="M/d/yy h:mm a">
+			<reportElement uuid="edb6bfe6-d7de-41e4-b449-4cf52c9e70f2" x="160" y="248" width="90" height="67" origin="4" srcId="11"/>
+			<textContent><![CDATA[4/6/14 3:02 PM]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" lineSpacingFactor="1.2578125" leadingOffset="-2.1972656" valueClass="java.lang.Integer">
+			<reportElement uuid="e53f5462-6ade-425c-8fdb-8352d207bca0" x="250" y="249" width="110" height="66" origin="4" srcId="12"/>
+			<textContent><![CDATA[1]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" lineSpacingFactor="1.2578125" leadingOffset="-2.1972656">
+			<reportElement uuid="dad8124c-2c30-47bd-8d7c-f88bc863ede6" x="360" y="249" width="120" height="67" origin="4" srcId="13"/>
+			<textContent><![CDATA[Paid]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" lineSpacingFactor="1.2578125" leadingOffset="-2.1972656">
+			<reportElement uuid="0cd9e989-9487-48b8-a3a3-1bdde5be0c8a" x="480" y="249" width="95" height="67" origin="4" srcId="14"/>
+			<textContent><![CDATA[Cash]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" lineSpacingFactor="1.2578125" leadingOffset="-2.1972656" valueClass="java.lang.Integer">
+			<reportElement uuid="81b24e60-c983-4841-b010-85fa90ad61fa" x="19" y="316" width="61" height="64" origin="4" srcId="9"/>
+			<textContent><![CDATA[4]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" lineSpacingFactor="1.2578125" leadingOffset="-2.1972656" valueClass="java.lang.Double">
+			<reportElement uuid="fcacd96b-0762-4716-bb83-33546467026f" x="80" y="316" width="80" height="64" origin="4" srcId="10"/>
+			<textContent><![CDATA[3490.0]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" lineSpacingFactor="1.2578125" leadingOffset="-2.1972656" valueClass="java.sql.Timestamp" pattern="M/d/yy h:mm a">
+			<reportElement uuid="edb6bfe6-d7de-41e4-b449-4cf52c9e70f2" x="160" y="315" width="90" height="67" origin="4" srcId="11"/>
+			<textContent><![CDATA[4/6/14 3:02 PM]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" lineSpacingFactor="1.2578125" leadingOffset="-2.1972656" valueClass="java.lang.Integer">
+			<reportElement uuid="e53f5462-6ade-425c-8fdb-8352d207bca0" x="250" y="316" width="110" height="66" origin="4" srcId="12"/>
+			<textContent><![CDATA[1]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" lineSpacingFactor="1.2578125" leadingOffset="-2.1972656">
+			<reportElement uuid="dad8124c-2c30-47bd-8d7c-f88bc863ede6" x="360" y="316" width="120" height="67" origin="4" srcId="13"/>
+			<textContent><![CDATA[Credit]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" lineSpacingFactor="1.2578125" leadingOffset="-2.1972656">
+			<reportElement uuid="0cd9e989-9487-48b8-a3a3-1bdde5be0c8a" x="480" y="316" width="95" height="67" origin="4" srcId="14"/>
+			<textContent><![CDATA[Cash]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" lineSpacingFactor="1.2578125" leadingOffset="-2.1972656" valueClass="java.lang.Integer">
+			<reportElement uuid="81b24e60-c983-4841-b010-85fa90ad61fa" x="19" y="383" width="61" height="64" origin="4" srcId="9"/>
+			<textContent><![CDATA[5]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" lineSpacingFactor="1.2578125" leadingOffset="-2.1972656" valueClass="java.lang.Double">
+			<reportElement uuid="fcacd96b-0762-4716-bb83-33546467026f" x="80" y="383" width="80" height="64" origin="4" srcId="10"/>
+			<textContent><![CDATA[3890.0]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" lineSpacingFactor="1.2578125" leadingOffset="-2.1972656" valueClass="java.sql.Timestamp" pattern="M/d/yy h:mm a">
+			<reportElement uuid="edb6bfe6-d7de-41e4-b449-4cf52c9e70f2" x="160" y="382" width="90" height="67" origin="4" srcId="11"/>
+			<textContent><![CDATA[4/6/14 3:02 PM]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" lineSpacingFactor="1.2578125" leadingOffset="-2.1972656" valueClass="java.lang.Integer">
+			<reportElement uuid="e53f5462-6ade-425c-8fdb-8352d207bca0" x="250" y="383" width="110" height="66" origin="4" srcId="12"/>
+			<textContent><![CDATA[1]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" lineSpacingFactor="1.2578125" leadingOffset="-2.1972656">
+			<reportElement uuid="dad8124c-2c30-47bd-8d7c-f88bc863ede6" x="360" y="383" width="120" height="67" origin="4" srcId="13"/>
+			<textContent><![CDATA[Credit]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" lineSpacingFactor="1.2578125" leadingOffset="-2.1972656">
+			<reportElement uuid="0cd9e989-9487-48b8-a3a3-1bdde5be0c8a" x="480" y="383" width="95" height="67" origin="4" srcId="14"/>
+			<textContent><![CDATA[Cash]]></textContent>
+		</text>
+	</page>
+</jasperPrint>

@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ve_main_report" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ee8c7623-03ae-4bea-b54c-7a83ef085b24">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="687"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="PieChartDataset" uuid="3a049345-0e57-4799-b49d-8befc1fee20a"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     vehiclemaintains.`ve_Maintains_ID` AS vehiclemaintains_ve_Maintains_ID,
+     vehiclemaintains.`Amount` AS vehiclemaintains_Amount,
+     vehiclemaintains.`Description` AS vehiclemaintains_Description,
+     vehiclemaintains.`Date` AS vehiclemaintains_Date,
+     vehiclemaintains.`vehiclenumber` AS vehiclemaintains_vehiclenumber
+FROM
+     `vehiclemaintains` vehiclemaintains]]>
+	</queryString>
+	<field name="vehiclemaintains_ve_Maintains_ID" class="java.lang.String"/>
+	<field name="vehiclemaintains_vehiclenumber" class="java.lang.String"/>
+	<field name="vehiclemaintains_Description" class="java.lang.String"/>
+	<field name="vehiclemaintains_Amount" class="java.lang.Double"/>
+	<field name="vehiclemaintains_Date" class="java.lang.String"/>
+	<background>
+		<band height="802" splitType="Stretch">
+			<pie3DChart>
+				<chart isShowLegend="false" evaluationTime="Report">
+					<reportElement uuid="d3c7e8d5-a6fb-4c0a-83b3-f36f07825f40" x="-20" y="357" width="247" height="131"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<dataset>
+						<datasetRun subDataset="PieChartDataset" uuid="edd81fcb-097d-49e3-8ef1-cb41f17af0df">
+							<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource(5)]]></dataSourceExpression>
+						</datasetRun>
+					</dataset>
+					<keyExpression><![CDATA[/* Replace with your key expression here */
+$V{REPORT_COUNT}]]></keyExpression>
+					<valueExpression><![CDATA[new Double(200*Math.random()*5)]]></valueExpression>
+				</pieDataset>
+				<pie3DPlot>
+					<plot backgroundAlpha="0.5" foregroundAlpha="0.8">
+						<seriesColor seriesOrder="0" color="#3399FF"/>
+						<seriesColor seriesOrder="1" color="#00CCFF"/>
+						<seriesColor seriesOrder="2" color="#0066CC"/>
+						<seriesColor seriesOrder="3" color="#6699FF"/>
+						<seriesColor seriesOrder="4" color="#004A94"/>
+						<seriesColor seriesOrder="5" color="#00356A"/>
+					</plot>
+					<itemLabel color="#000000" backgroundColor="#FFFFFF"/>
+				</pie3DPlot>
+			</pie3DChart>
+			<image>
+				<reportElement uuid="f51e3ea1-0a1e-4525-b949-bc507f7f4ddf" x="-20" y="65" width="229" height="250">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA["flower1.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="9e71285b-b079-472a-80be-04e8a73bac68" x="-20" y="-20" width="229" height="250">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} > 1]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA["flower1.png"]]></imageExpression>
+			</image>
+			<pie3DChart>
+				<chart isShowLegend="false" evaluationTime="Report">
+					<reportElement uuid="1d6ed3ee-d0fb-455e-9226-9ded55d3cbb6" x="-20" y="488" width="247" height="131"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<dataset>
+						<datasetRun subDataset="PieChartDataset" uuid="8f4624f7-ad57-4d49-a189-2098210afbb4">
+							<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource(5)]]></dataSourceExpression>
+						</datasetRun>
+					</dataset>
+					<keyExpression><![CDATA[/* Replace with your key expression here */
+$V{REPORT_COUNT}]]></keyExpression>
+					<valueExpression><![CDATA[new Double(200*Math.random()*5)]]></valueExpression>
+				</pieDataset>
+				<pie3DPlot>
+					<plot backgroundAlpha="0.5" foregroundAlpha="0.8">
+						<seriesColor seriesOrder="0" color="#3399FF"/>
+						<seriesColor seriesOrder="1" color="#00CCFF"/>
+						<seriesColor seriesOrder="2" color="#0066CC"/>
+						<seriesColor seriesOrder="3" color="#6699FF"/>
+						<seriesColor seriesOrder="4" color="#004A94"/>
+						<seriesColor seriesOrder="5" color="#00356A"/>
+					</plot>
+					<itemLabel color="#000000" backgroundColor="#FFFFFF"/>
+				</pie3DPlot>
+			</pie3DChart>
+			<pie3DChart>
+				<chart isShowLegend="false" evaluationTime="Report">
+					<reportElement uuid="51466dce-4f9b-4cbd-bdb8-0f967869910f" x="-20" y="619" width="247" height="131"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<dataset>
+						<datasetRun subDataset="PieChartDataset" uuid="f7facedb-2927-4de4-9d68-23c930115609">
+							<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource(5)]]></dataSourceExpression>
+						</datasetRun>
+					</dataset>
+					<keyExpression><![CDATA[/* Replace with your key expression here */
+$V{REPORT_COUNT}]]></keyExpression>
+					<valueExpression><![CDATA[new Double(200*Math.random()*5)]]></valueExpression>
+				</pieDataset>
+				<pie3DPlot>
+					<plot backgroundAlpha="0.5" foregroundAlpha="0.8">
+						<seriesColor seriesOrder="0" color="#3399FF"/>
+						<seriesColor seriesOrder="1" color="#00CCFF"/>
+						<seriesColor seriesOrder="2" color="#0066CC"/>
+						<seriesColor seriesOrder="3" color="#6699FF"/>
+						<seriesColor seriesOrder="4" color="#004A94"/>
+						<seriesColor seriesOrder="5" color="#00356A"/>
+					</plot>
+					<itemLabel color="#000000" backgroundColor="#FFFFFF"/>
+				</pie3DPlot>
+			</pie3DChart>
+			<staticText>
+				<reportElement uuid="e00d2279-4a97-4da3-b962-4cd3f95e2848" mode="Opaque" x="318" y="394" width="239" height="181" backcolor="#FFFFCC">
+					<printWhenExpression><![CDATA[Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4">
+					<pen lineWidth="1.0" lineColor="#CC9900"/>
+					<topPen lineWidth="1.0" lineColor="#CC9900"/>
+					<leftPen lineWidth="1.0" lineColor="#CC9900"/>
+					<bottomPen lineWidth="1.0" lineColor="#CC9900"/>
+					<rightPen lineWidth="1.0" lineColor="#CC9900"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Each chart is populated on each page.
+The 3 pie charts are currently using an empty datasource and the values are
+generated using a random generator.
+
+This rectangle element is not printed (see the print when expression of this
+element)]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="25f51b58-23b9-4bff-9927-2bc8e42d5fc6" x="201" y="431" width="117" height="1">
+					<printWhenExpression><![CDATA[Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Dotted" lineColor="#996600"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="f431191f-7003-4b83-9a4f-beddd8d6d4de" mode="Opaque" x="275" y="-10" width="240" height="181" backcolor="#FFFFCC">
+					<printWhenExpression><![CDATA[Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4">
+					<pen lineWidth="1.0" lineColor="#CC9900"/>
+					<topPen lineWidth="1.0" lineColor="#CC9900"/>
+					<leftPen lineWidth="1.0" lineColor="#CC9900"/>
+					<bottomPen lineWidth="1.0" lineColor="#CC9900"/>
+					<rightPen lineWidth="1.0" lineColor="#CC9900"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Flowers: there are two flowers, the first one is printed only starting from the second page, the other one only in the first page.]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="6519ef66-9dc6-4d6c-a8c5-aadf5fe3f226" x="72" y="37" width="204" height="1">
+					<printWhenExpression><![CDATA[Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Dotted" lineColor="#996600"/>
+				</graphicElement>
+			</line>
+		</band>
+	</background>
+	<title>
+		<band height="94" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="5590e4bf-e649-4c08-8ab9-c22acdd0283d" style="SubTitle" x="336" y="65" width="217" height="29"/>
+				<textElement textAlignment="Right">
+					<font size="22" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Flower SubTitle]]></text>
+			</staticText>
+			<frame>
+				<reportElement uuid="8f53c9b9-29cb-43c2-a606-47edffb11601" mode="Opaque" x="-20" y="0" width="597" height="65" forecolor="#006699" backcolor="#006699"/>
+				<staticText>
+					<reportElement uuid="3a3f6e14-8723-4e24-a8d4-c15e76db48d2" style="Title" x="231" y="0" width="346" height="65"/>
+					<textElement textAlignment="Right">
+						<font size="54" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Flower Title]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<frame>
+				<reportElement uuid="38b88ead-332f-487b-b018-1db89a1ee9cd" x="227" y="0" width="328" height="20"/>
+				<staticText>
+					<reportElement uuid="32802bbc-6c07-4810-8a18-71fc1bde07c7" style="Column header" positionType="Float" x="0" y="0" width="65" height="20" forecolor="#000000"/>
+					<textElement>
+						<font fontName="Arial" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[vehiclemaintains_ve_Maintains_ID]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="9a61bedb-c7ef-4e1a-b9b8-88a881a52b54" style="Column header" positionType="Float" x="65" y="0" width="65" height="20" forecolor="#000000"/>
+					<textElement>
+						<font fontName="Arial" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[vehiclemaintains_vehiclenumber]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="9df31362-a365-462c-8d7e-a95f8c549cd3" style="Column header" positionType="Float" x="130" y="0" width="65" height="20" forecolor="#000000"/>
+					<textElement>
+						<font fontName="Arial" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[vehiclemaintains_Description]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="91ef73ae-3501-408f-8284-3e8850b53202" style="Column header" positionType="Float" x="195" y="0" width="65" height="20" forecolor="#000000"/>
+					<textElement>
+						<font fontName="Arial" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[vehiclemaintains_Amount]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="7b01bb83-f2cc-40ed-bbf7-4d24a6048f56" style="Column header" positionType="Float" x="260" y="0" width="65" height="20" forecolor="#000000"/>
+					<textElement>
+						<font fontName="Arial" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[vehiclemaintains_Date]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<line>
+				<reportElement uuid="f624eec5-cfd0-4790-9fa4-9d73fcf955fd" positionType="FixRelativeToBottom" x="227" y="22" width="326" height="1"/>
+			</line>
+			<frame>
+				<reportElement uuid="3262a56f-f740-4a16-8cd5-25879ec4f33e" x="227" y="0" width="328" height="20"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="f8231706-de4d-4d5f-a099-a6a4135a7250" style="Detail" positionType="Float" x="0" y="0" width="65" height="18"/>
+					<textElement>
+						<font fontName="Arial" size="14" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{vehiclemaintains_ve_Maintains_ID}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="360d67f7-2490-43e6-85ca-6c2bb4b29e03" style="Detail" positionType="Float" x="65" y="0" width="65" height="18"/>
+					<textElement>
+						<font fontName="Arial" size="14" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{vehiclemaintains_vehiclenumber}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="7178a7b4-16ca-4e25-a24f-16243b645afa" style="Detail" positionType="Float" x="130" y="0" width="65" height="18"/>
+					<textElement>
+						<font fontName="Arial" size="14" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{vehiclemaintains_Description}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="42765322-55f0-49b1-8b91-a063d8e968bd" style="Detail" positionType="Float" x="195" y="0" width="65" height="18"/>
+					<textElement>
+						<font fontName="Arial" size="14" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{vehiclemaintains_Amount}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="f4c04ca2-4720-48dd-a75b-cfe3fc1046db" style="Detail" positionType="Float" x="260" y="0" width="65" height="18"/>
+					<textElement>
+						<font fontName="Arial" size="14" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{vehiclemaintains_Date}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch">
+			<line>
+				<reportElement uuid="03388b85-9237-4894-ba7a-3c7a7a1ee18b" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="13" splitType="Stretch">
+			<frame>
+				<reportElement uuid="8a90ef36-98a1-469a-876a-c12cacb83724" mode="Opaque" x="2" y="0" width="555" height="13" forecolor="#D0B48E" backcolor="#006699"/>
+				<textField evaluationTime="Report">
+					<reportElement uuid="3ffe23b1-c774-48b2-b3eb-834129b126f4" style="Column header" x="513" y="-1" width="40" height="13" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="7035f7b0-1d48-4f7f-86c1-626d2d21584f" style="Column header" x="433" y="-1" width="80" height="13" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement uuid="925e9941-e3d8-4d92-b7e9-8cedad35a381" style="Column header" x="2" y="0" width="197" height="13" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
